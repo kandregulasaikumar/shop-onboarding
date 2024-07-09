@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Onboarding Wizard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="onboarding-wizard">
+          
+            <div id="step1" class="wizard-step">
+                <h2>Apply a Theme</h2>
+                <div class="theme-options" style="display: flex;">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.istockphoto.com/id/1729402032/photo/an-unrecognizable-beautiful-woman-holding-her-shopping-bags.jpg?s=1024x1024&w=is&k=20&c=HvnhEfTQAXIjNJYDuf465dddhqVhlXz03kbahAN2CTM=" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bags Theme</h5>
+                            <button class="btn btn-primary" data-theme="theme1">Apply</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.istockphoto.com/id/1153032746/photo/close-up-of-calendar-and-clock-on-the-table-planning-for-business-meeting-or-travel-planning.jpg?s=1024x1024&w=is&k=20&c=BXCP5Aw7pKyq3CO93R0g6HOjJeFlQyiFyQ3_1agfqTU=" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Flex Theme</h5>
+                            <button class="btn btn-primary" data-theme="theme2">Apply</button>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://media.istockphoto.com/id/1339264709/photo/flat-lay-with-womans-clothes-and-accessories.jpg?s=1024x1024&w=is&k=20&c=jEVAHmR8cL6tB7FTN3cNM1WnGb5fb9sd2f69Lbu3TAU=" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chic Theme</h5>
+                            <button class="btn btn-primary" data-theme="theme3">Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success next-step">Next</button>
+            </div>
+          <!-- step 2.... -->
+            <div id="step2" class="wizard-step d-none">
+                <h2>Add Product Details</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="productType">Add a Product Type</label>
+                        <input type="text" id="productType" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Add a Category (optional)</label>
+                        <input type="text" id="category" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="subCategory">Add a Sub-category (optional)</label>
+                        <input type="text" id="subCategory" class="form-control">
+                    </div>
+                </form>
+                <button class="btn btn-secondary prev-step">Back</button>
+                <button class="btn btn-success next-step">Next</button>
+            </div>
+             <!-- step 3.... -->
+            <div id="step3" class="wizard-step d-none">
+                <h1>Let's Add Your First Product</h1>
+                <h4>Basic Details</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="productName">Product Name</label>
+                                <input type="text" id="productName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="productDescription">Product Description</label>
+                                <textarea id="productDescription" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Add Image(s)</label>
+                                <input type="file" id="productImages" class="form-control" multiple>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="skuCodeCheckbox">
+                                    <label class="form-check-label" for="skuCodeCheckbox">This product has an SKU
+                                        code</label>
+                                </div>
+                                <input type="text" id="skuCode" class="form-control d-none" placeholder="SKU Code">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="hsnSacCodeCheckbox">
+                                    <label class="form-check-label" for="hsnSacCodeCheckbox">This product has an HSN/SAC
+                                        code</label>
+                                </div>
+                                <input type="text" id="hsnSacCode" class="form-control d-none"
+                                    placeholder="HSN/SAC Code">
+                            </div>
+                        </form>
+                        <h1>Pricing Details</h1>
+                        <form>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="inclusiveGst">
+                                    <label class="form-check-label" for="inclusiveGst">Price inclusive of GST</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="netPrice">Net Price</label>
+                                <input type="text" id="netPrice" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="listPrice">List Price</label>
+                                <input type="text" id="listPrice" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="discountPercentage">Discount Percentage</label>
+                                <input type="text" id="discountPercentage" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="gstRate">GST Rate</label>
+                                <input type="text" id="gstRate" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="shippingCharges">Shipping Charges (if any)</label>
+                                <input type="text" id="shippingCharges" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="stockLevel">Stock Level</label>
+                                <input type="text" id="stockLevel" class="form-control">
+                            </div>
+                        </form>
+                        <button class="btn btn-secondary prev-step">Back</button>
+                        <button class="btn btn-success next-step">Next</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Product Preview</h4>
+                        <div class="card">
+                            <img id="previewImage" class="card-img-top" src="" alt="Product Image"
+                                style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="previewProductName">Product Name</h5>
+                                <p class="card-text" id="previewProductDescription">Product Description</p>
+                                <p><strong>Price: </strong><span id="previewProductPrice">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+              <!-- step 4.... -->
+            <div id="step4" class="wizard-step d-none">
+                <h1>Let's Customize Your ShopNix Store</h1>
+                <h2>Set Up the Store</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="storeName">Name of the Store</label>
+                                <input type="text" id="storeName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storeTitle">Store Title</label>
+                                <input type="text" id="storeTitle" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storeLogo">Logo</label>
+                                <input type="file" id="storeLogo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storePhone">Phone</label>
+                                <input type="text" id="storePhone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="storeEmail">Email</label>
+                                <input type="email" id="storeEmail" class="form-control">
+                            </div>
+                        </form>
+                        <button class="btn btn-secondary prev-step">Back</button>
+                        <button class="btn btn-success finish">Finish</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Store Preview</h4>
+                        <div class="card">
+                            <img id="previewStoreLogo" class="card-img-top" src="" alt="Store Logo"
+                                style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="previewStoreName">Store Name</h5>
+                                <p class="card-text" id="previewStoreTitle">Store Title</p>
+                                <p><strong>Phone: </strong><span id="previewStorePhone">N/A</span></p>
+                                <p><strong>Email: </strong><span id="previewStoreEmail">N/A</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
